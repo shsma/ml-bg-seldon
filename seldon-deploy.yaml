@@ -1,23 +1,24 @@
+---
 apiVersion: machinelearning.seldon.io/v1alpha2
 kind: SeldonDeployment
 metadata:
+  labels:
+    app: seldon
   name: ml-brand-gender
 spec:
-  name: ml-brnd-gender-deployment
+  name: cl-iris-knn-z1
   predictors:
   - componentSpecs:
     - spec:
         containers:
-        - name: ml-brand-gender
-          image: msabr027/ml-brand-gender:0.1
+        - image: msabr027/ml-brand-gender:0.1
+          imagePullPolicy: IfNotPresent
+          name: classifier
     graph:
       children: []
       endpoint:
         type: REST
       name: classifier
       type: MODEL
-    annotations:
-      predictor_version: "0.1"
-      seldon.io/svc-name: ml-brand-gender-svc
-    name: ml-brand-gender-graph
+    name: example
     replicas: 1
