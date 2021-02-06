@@ -1,0 +1,4 @@
+# SSENSE Private CloudRepo link
+--extra-index-url https://5658b6e4-ecd3-4fe6-a87d-aed4cba301a0:df2b9f9a-7dfa-4b9e-aaa5-6ffcdf06da92@ssense.mycloudrepo.io/repositories/ssense
+# Monitoring
+ssense_logger==0.2.3
